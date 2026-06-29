@@ -18,9 +18,8 @@ A simple and efficient Telegram bot for handling user support tickets. Users can
 ## Tech Stack
 
 - Python
-- python-telegram-bot (or aiogram, depending on your project)
-- SQLite / MySQL (depending on configuration)
-- REST / webhook (optional)
+- python-telegram-bot
+- MySQL
 
 ---
 
