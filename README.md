@@ -18,7 +18,8 @@ A simple and efficient Telegram bot for handling user support tickets. Users can
 ## Tech Stack
 
 - Python
-- python-telegram-bot
+- Php
+- Python-telegram-bot
 - MySQL
 
 ---
