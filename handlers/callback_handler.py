@@ -25,10 +25,9 @@ def register_callback_handler(bot):
                 "📝 Please describe your issue in detail."
             )
 
-        # 📂 لیست تیکت‌ها
         elif data == "my_tickets":
 
-            tickets = get_user_tickets(db_user["id"])
+            tickets = get_user_tickets(db_user["telegram_id"])
 
             if not tickets:
                 bot.send_message(
@@ -40,7 +39,8 @@ def register_callback_handler(bot):
             text = "📂 Your Tickets:\n\n"
 
             for t in tickets:
-                text += f"#{t['id']} - {t['status']}\n"
+                status_emoji = "🔓" if t['status'] == 'open' else "✅"
+                text += f"{status_emoji} #{t['id']} - {t['status'].upper()}\n"
 
             bot.send_message(
                 call.message.chat.id,

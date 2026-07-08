@@ -17,7 +17,7 @@ def register_message_handler(bot):
                 username=message.from_user.username
             )
 
-            create_ticket(db_user["id"], message.text)
+            create_ticket(db_user["telegram_id"], message.text)
 
             bot.send_message(
                 message.chat.id,
